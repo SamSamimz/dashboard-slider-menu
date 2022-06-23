@@ -1,0 +1,242 @@
+/* Google font CDN */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Poppins:wght@300;400;600&display=swap');
+
+
+/* Globar CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+/* main css  */
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 78px;
+    background: #11101d;
+    padding: 6px 14px;
+    transition: all .3s ease;
+}
+.sidebar.active {
+    width: 240px;
+}
+.sidebar .logo_content .logo{
+    color: #fff;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;   
+}
+
+.sidebar.active .logo_content .logo {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar .logo_content .logo i {
+    font-size: 1.8rem;
+    margin-right: 5px;
+}
+.sidebar .logo_content .logo .logo_name {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
+.sidebar #btn {
+    position: absolute;
+    color: #fff;
+    left: 50%;
+    top: 6px;
+    font-size: 1.6rem;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+
+.sidebar.active #btn {
+    left: 90%;
+}
+.sidebar ul{
+    margin-top: 1.1rem;
+}
+
+.sidebar ul li {
+    position: relative;
+    /* height: 50px; */
+    width: 100%;
+    margin: 0 5px;
+    line-height: 50px;
+    /* opacity: 0; */
+}
+.sidebar ul li .links_name {
+    opacity: 0;
+    pointer-events: none;
+    transition: .4s ease;
+}
+.sidebar.active ul li .links_name {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.sidebar ul li .tooltip {
+    position: absolute;
+    height: 35px;
+    width: 122px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    left: 90px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0s;
+    pointer-events: none;
+}
+
+.sidebar.active ul li .tooltip {
+    display: none;
+}
+
+.sidebar ul li:hover .tooltip {
+    opacity: 1;
+    transition: all .5s ease;
+    pointer-events: auto;
+}
+.sidebar ul li a {
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    border-radius: 12px;
+    transition: all .4s ease;
+    white-space: nowrap;
+}
+
+.sidebar ul li a:hover {
+    background-color: #fff;
+    color: #11101d;
+}
+
+.sidebar.active ul li a:hover{
+    color: #11101d;
+    background-color: #fff;
+    transform: translateX(8px);
+}
+.sidebar ul li a i {
+    min-width: 40px;
+    /* height: 50px; */
+    line-height: 50px;
+    text-align: center;
+}
+
+.sidebar ul li input {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background: #1d1b31;
+    padding-left: 2.8rem;
+    color: #fff;
+    font-size: 18px;
+}
+
+.sidebar #search_btn {
+    position: relative;
+    top: 5px;
+    left: .7rem;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.sidebar .profile_content {
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sidebar .profile_content .profile {
+    position: relative;
+    padding: 10px 6px;
+    background: #1d1b31;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.sidebar .profile_content .profile .profile_details {
+   display: none 
+}
+
+.sidebar.active .profile_content .profile .profile_details {
+    display: flex;
+}
+.profile .profile_details img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+.profile .profile_details .name_job {
+    margin-left: 10px;
+}
+.profile .profile_details .name_job p {
+
+}
+.profile .profile_details .name_job span {
+    font-family: cursive;
+    color: #fc6d6d;
+    font-size: 1rem;
+}
+
+.profile .bx-log-out {
+    padding: .6rem .8rem;
+    border-radius: 6px;
+    font-size: 1.6rem;
+    background: #11101d;
+}
+.sidebar.active .profile .bx-log-out {
+    font-size: 1.6rem;
+    transform: translateX(.5rem);
+    background: transparent;
+    transition: .4s ease;
+}
+/* .home_content{
+    position: absolute;
+    left: 240px;
+    top: 5px;
+}
+
+.home_content .text{
+    font-size: 2rem;
+    color:#1d1b31;
+    font-weight: 500;
+
+} */
